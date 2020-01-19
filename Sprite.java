@@ -2,7 +2,7 @@ package ru.gb.jtwo.lone.online.circles;
 
 import java.awt.*;
 
-public class Sprite {
+public class Sprite {//создаем класс Sprite и меняем расположение центра объекта из угла фигуры в центр
     protected float x;
     protected float y;
     protected float halfWidth;

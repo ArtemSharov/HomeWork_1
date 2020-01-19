@@ -3,7 +3,7 @@ package ru.gb.jtwo.lone.online.circles;
 import javax.swing.*;
 import java.awt.*;
 
-public class GameCanvas extends JPanel {
+public class GameCanvas extends JPanel {//создаем класс GameCanvas и наследуем JPanel (магия swing)
 
     MainCircles gameController;
     long lastFrameTime;
@@ -14,7 +14,7 @@ public class GameCanvas extends JPanel {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g) {//создаем метод рисования на конве
         super.paintComponent(g);
         //60fps
         long currentTime = System.nanoTime();
