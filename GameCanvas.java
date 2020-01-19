@@ -11,6 +11,7 @@ public class GameCanvas extends JPanel {//создаем класс GameCanvas �
     GameCanvas(MainCircles gameController) {
         this.gameController = gameController;
         lastFrameTime = System.nanoTime();
+
     }
 
     @Override
@@ -33,4 +34,8 @@ public class GameCanvas extends JPanel {//создаем класс GameCanvas �
     public int getRight() { return getWidth() - 1; }
     public int getTop() { return 0; }
     public int getBottom() { return getHeight() - 1; }
+
+
+    public void setBackground(BackGroundColor bGColor) {
+    }
 }

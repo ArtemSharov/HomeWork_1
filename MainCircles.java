@@ -11,6 +11,9 @@ public class MainCircles extends JFrame { //объявляем класс MainCi
 
     Sprite[] sprites = new Sprite[10]; // создаем массив объектов класса Sprite, 10 шт
 
+
+
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -25,16 +28,23 @@ public class MainCircles extends JFrame { //объявляем класс MainCi
         setBounds(POS_X, POS_Y, WINDOW_WIDTH, WINDOW_HEIGHT); //Определяем границы
         initApplication(); // Запускаем метод initApplication
         GameCanvas canvas = new GameCanvas(this); //создаем новый объект класса GameCanvas
-        add(canvas, BorderLayout.CENTER); //Добавляем канву в окно с выравниванием по центру
+        add(canvas, BorderLayout.CENTER);//Добавляем канву в окно с выравниванием по центру
         setTitle("Circles"); //определчем заголовок
         setVisible(true); // Говорим чтоб было видимо
     }
 
     private void initApplication() { //Создаем метод initApplication, который заполняем массив объектами класса Ball
         for (int i = 0; i < sprites.length; i++) {
+            sprites[i] = new BackGroundColor();
+        }
+        for (int i = 0; i < sprites.length; i++) {
             sprites[i] = new Ball();
         }
+
+
     }
+
+
 
     public void onDrawFrame(GameCanvas canvas, Graphics g, float deltaTime) {//Создаем метод onDrawFrame с параметрами, в которые передаем канву, графику и время
         update(canvas, deltaTime); // obnovlenie // S = v * t вызов метода
