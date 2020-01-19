@@ -10,6 +10,7 @@ public class MainCircles extends JFrame { //объявляем класс MainCi
     private static final int WINDOW_HEIGHT = 600;
 
     Sprite[] sprites = new Sprite[10]; // создаем массив объектов класса Sprite, 10 шт
+    BackGroundColor[] bGColors = new BackGroundColor[100];
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -25,6 +26,7 @@ public class MainCircles extends JFrame { //объявляем класс MainCi
         setBounds(POS_X, POS_Y, WINDOW_WIDTH, WINDOW_HEIGHT); //Определяем границы
         initApplication(); // Запускаем метод initApplication
         GameCanvas canvas = new GameCanvas(this); //создаем новый объект класса GameCanvas
+        
         add(canvas, BorderLayout.CENTER); //Добавляем канву в окно с выравниванием по центру
         setTitle("Circles"); //определчем заголовок
         setVisible(true); // Говорим чтоб было видимо

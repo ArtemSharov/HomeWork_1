@@ -11,6 +11,7 @@ public class GameCanvas extends JPanel {//создаем класс GameCanvas �
     GameCanvas(MainCircles gameController) {
         this.gameController = gameController;
         lastFrameTime = System.nanoTime();
+
     }
 
     @Override
